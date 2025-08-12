@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato • Lar Amigo</title>
+  <meta name="description" content="Fale com o Lar Amigo para adotar, doar, voluntariar ou apadrinhar." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <a class="brand-title" href="index.html">Lar Amigo</a>
+      </div>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="index.html#ajudar">Como ajudar</a></li>
+          <li><a href="contato.html" class="btn btn-outline">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Fale com a gente</h2>
+        <p>Tire dúvidas, manifeste interesse em adoção, doações, voluntariado ou apadrinhamento.</p>
+      </div>
+
+      <div class="grid" style="grid-template-columns: 1.1fr 0.9fr; align-items: start;">
+        <form class="form" action="#" method="post">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="voce@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone (opcional)</label>
+              <input id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="interesse">Assunto</label>
+              <select id="interesse" name="interesse" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Adotar</option>
+                <option>Doar</option>
+                <option>Voluntariado</option>
+                <option>Apadrinhamento</option>
+                <option>Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="pet">Pet de interesse (se houver)</label>
+            <input id="pet" name="pet" type="text" placeholder="Ex.: Luna, Thor..." />
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte-nos como você quer ajudar ou adotar" required></textarea>
+          </div>
+
+          <div class="form-group" style="flex-direction: row; align-items: center; gap: 8px;">
+            <input id="lgpd" name="lgpd" type="checkbox" required />
+            <label for="lgpd" style="font-weight: 400;">
+              Concordo em ser contatado(a) pelo Lar Amigo com base nas informações fornecidas.
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+            <span class="small">Responderemos em até 48h úteis.</span>
+          </div>
+        </form>
+
+        <aside>
+          <article class="card">
+            <img class="card-media" src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=1200&auto=format&fit=crop" alt="Pegadas de animais na areia" loading="lazy" />
+            <div class="card-body">
+              <h3 class="card-title">Outros canais</h3>
+              <p class="card-text">E-mail: contato@laramigo.org<br>Telefone: (00) 0000-0000<br>Instagram: @laramigo</p>
+              <p class="small">Atendimento: seg a sáb, 9h às 17h.</p>
+            </div>
+          </article>
+
+          <article class="card" style="margin-top:12px;">
+            <div class="card-body">
+              <h3 class="card-title">Endereço (fictício)</h3>
+              <p class="card-text">Rua dos Resgates, 123 - Bairro Esperança<br>Cidade Solidária - BR</p>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="ano"></span> Lar Amigo</div>
+      <div class="small">E-mail: contato@laramigo.org • Tel: (00) 0000-0000</div>
+    </div>
+  </footer>
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
